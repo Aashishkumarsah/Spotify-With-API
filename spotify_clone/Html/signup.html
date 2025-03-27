@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Sign Up & Login</title>
+    <link rel="stylesheet" type="text/css" href="/stylecss/signup.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+
+            <div id="logo_h1">
+                <img src="../spotify_logo.png" alt="spotify_logo">
+                <h1>Spotify</h1>
+            </div>
+
+        <!-- Sign-Up Form -->
+        <form id="sign-up-form" class="active" onsubmit="submitSignUpData(event); return false;">
+            <h2 class="signup_text">Sign Up</h2>
+
+            <div id="align_with_container">
+
+                <label for="signup-email">Email address</label>
+                <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+            
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" name="username" placeholder="Create a username" required>
+            
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+            
+                <label for="signup-dob">Date of Birth</label>
+                <input type="date" id="signup-dob" name="dob" required>
+            
+                <label for="signup-gender">Gender</label>
+                <select id="signup-gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="non-binary">Non-binary</option>
+                    <option value="other">Other</option>
+                </select>
+            <!--working on it-->
+                <div id="align_button_center">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Login Form -->
+        <form id="login-form" onsubmit="submitLoginData(event); return false;">
+            <h2>Login</h2>
+            <label for="login-email">Email address</label>
+            <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+            
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Log In</button>
+        </form>
+
+        <!-- Toggle Link -->
+        <p class="toggle" id="toggle-text">Already have an account? Log In</p>
+    </div>
+
+    <script src="/Javascript/script_index.js"></script>
+    
+</body>
+</html>
